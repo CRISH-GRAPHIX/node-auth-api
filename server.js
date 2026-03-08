@@ -199,7 +199,7 @@ const authRoutes = require ('./routes/authRoutes');
 app.use('/api/users', userRouters);
 app.use('/api/auth', authRoutes);
 
-// mongoose.connect('mongodb://127.0.0.1:27017/myapp')
+
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.log(err));
